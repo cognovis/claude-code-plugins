@@ -11,7 +11,7 @@
 #>
 param(
     [Alias("b")][string]$Bead,
-    [Alias("v")][switch]$Verbose,
+    [Alias("v")][switch]$VerboseOutput,
     [switch]$SkipPerms,
     [switch]$ForceCheck,
     [switch]$NoCheck,
@@ -34,7 +34,7 @@ if ($SkipPerms) {
     [void]$args_.Add("--dangerously-skip-permissions")
 }
 
-if ($Verbose) {
+if ($VerboseOutput) {
     [void]$args_.Add("--verbose")
 }
 
