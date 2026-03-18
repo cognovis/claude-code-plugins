@@ -102,6 +102,22 @@ Autonomous implementation orchestrator. Analyzes a bead, optionally slices it, s
 
 Workflow: Sizing → Claim → Context → Break Analysis → Implementation → Verification → Close
 
+### `/workplan` — Backlog-Analyse und Arbeitsplan
+
+Analysiert das Beads-Backlog und erstellt einen priorisierten Arbeitsplan mit Autonomie-Scoring.
+
+```
+/workplan                       # Vollständige Analyse
+/workplan --label billing       # Nur Beads mit Label "billing"
+/workplan --focus P0            # Fokus auf kritische Beads
+```
+
+Features:
+- Dependency-Graph-Analyse (welche Blocker unblockieren am meisten?)
+- Autonomie-Scoring (welche Beads kann `cld -b` autonom lösen?)
+- Epic-Fortschritt und Lücken-Erkennung
+- Parallelisierungs-Empfehlungen
+
 ### `/session-close` — Session Close Protocol
 
 Structured session end: close beads, conventional commit, changelog, CalVer tag, push.
@@ -120,6 +136,8 @@ cognovis-workflow/
 │   └── plugin.json
 ├── agents/
 │   └── bead-orchestrator.md
+├── commands/
+│   └── workplan.md
 ├── scripts/
 │   ├── cld.zsh              # macOS/Linux launcher
 │   └── cld.ps1              # Windows launcher
