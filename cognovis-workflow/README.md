@@ -45,16 +45,29 @@ uv tool install claude-updater
 
 ### `cld` — Claude Code Launcher
 
-Shell wrapper that adds beads workflow integration to Claude Code.
+Wrapper that adds beads workflow integration to Claude Code.
 
+**macOS/Linux (ZSH):**
 ```bash
 cld                          # Launch Claude Code (with optional update check)
 cld -b <bead-id>             # Launch bead orchestrator in isolated worktree
 cld -b <bead-id> -v          # Same, with verbose output
 cld --skip-perms             # Launch with --dangerously-skip-permissions
 cld --no-check               # Skip update check
-cld --force-check            # Force update check (ignore cache)
-cld -bp <label>              # Launch with /plan --label <label>
+```
+
+**Windows (PowerShell):**
+```powershell
+.\cld.ps1                    # Launch Claude Code
+.\cld.ps1 -b <bead-id>      # Launch bead orchestrator in isolated worktree
+.\cld.ps1 -b <bead-id> -v   # Same, with verbose output
+.\cld.ps1 -SkipPerms         # Launch with --dangerously-skip-permissions
+.\cld.ps1 -NoCheck           # Skip update check
+```
+
+**Without wrapper (any OS):**
+```bash
+claude --worktree bead-<ID> --agent bead-orchestrator "Bead ID: <ID>. Execute the full orchestration workflow (Phase 0-5)."
 ```
 
 The `-b` flag:
@@ -108,7 +121,8 @@ cognovis-workflow/
 ├── agents/
 │   └── bead-orchestrator.md
 ├── scripts/
-│   └── cld.zsh
+│   ├── cld.zsh              # macOS/Linux launcher
+│   └── cld.ps1              # Windows launcher
 ├── skills/
 │   ├── epic-init/
 │   │   └── SKILL.md
