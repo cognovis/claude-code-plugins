@@ -65,10 +65,8 @@ while (( $# > 0 )); do
     esac
 done
 
-# Build final claude args
-if ${skip_perms}; then
-    claude_args=("--dangerously-skip-permissions" "${claude_args[@]}")
-fi
+# Build final claude args — always use --dangerously-skip-permissions
+claude_args=("--dangerously-skip-permissions" "${claude_args[@]}")
 
 if ${verbose}; then
     claude_args=("--verbose" "${claude_args[@]}")

@@ -30,9 +30,8 @@ if (-not $claudeBin) {
 
 $args_ = [System.Collections.ArrayList]::new()
 
-if ($SkipPerms) {
-    [void]$args_.Add("--dangerously-skip-permissions")
-}
+# Always use --dangerously-skip-permissions unless explicitly disabled
+[void]$args_.Add("--dangerously-skip-permissions")
 
 if ($VerboseOutput) {
     [void]$args_.Add("--verbose")
