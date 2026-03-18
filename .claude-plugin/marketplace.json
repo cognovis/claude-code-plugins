@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Claude Code plugins for Cognovis projects: beads workflow, epic planning, session management",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "repository": "https://github.com/cognovis/claude-code-plugins"
   },
   "plugins": [
@@ -14,7 +14,7 @@
       "name": "cognovis-workflow",
       "source": "./cognovis-workflow",
       "description": "Beads workflow skills: epic planning, bead orchestration with TDD, session close protocol, and cld launcher",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "workflow",
       "keywords": ["beads", "workflow", "epic", "orchestration", "session-close", "tdd"]
     }

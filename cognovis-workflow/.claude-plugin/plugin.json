@@ -1,6 +1,6 @@
 {
   "name": "cognovis-workflow",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Beads workflow skills for Cognovis projects: epic planning, bead orchestration, and session close protocol.",
   "author": {
     "name": "Malte Sussdorff",
