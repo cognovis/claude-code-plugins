@@ -91,7 +91,7 @@ if [[ -n "$bead_id" ]]; then
         bead_ns="${bead_prefix}-${bead_num}"
     fi
 
-    local prompt="Bead ID: $bead_id. Execute the full orchestration workflow (Phase 0–5)."
+    local prompt="You are the bead-orchestrator agent. Bead ID: $bead_id. Run your Phase 0–5 workflow as defined in your agent instructions. Do NOT invoke the /beads skill — you ARE the orchestrator."
 
     if [[ -n "$bead_ns" ]]; then
         prompt+=" Portless namespace: $bead_ns (use as namespace when starting dev servers, e.g. for portless-based setups)."

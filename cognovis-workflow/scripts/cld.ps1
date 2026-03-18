@@ -55,7 +55,7 @@ if ($Bead) {
         $beadNs = "$beadPrefix-$beadNum"
     }
 
-    $prompt = "Bead ID: $Bead. Execute the full orchestration workflow (Phase 0-5)."
+    $prompt = "You are the bead-orchestrator agent. Bead ID: $Bead. Run your Phase 0-5 workflow as defined in your agent instructions. Do NOT invoke the /beads skill - you ARE the orchestrator."
     if ($beadNs) {
         $prompt += " Portless namespace: $beadNs (use as namespace when starting dev servers, e.g. for portless-based setups)."
     }
